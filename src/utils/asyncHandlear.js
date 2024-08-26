@@ -1,6 +1,7 @@
-const asyncHandlear =(requestHandlear)=>{
-    (req,res,next)=>{
-        Promise.resolve(requestHandlear(req,res,next))
+const asyncHandlear = (requestHandlear)=>
+    {
+    return (req,res,next)=>{
+        Promise.resolve(requestHandlear(error,req,res,next))
         .catch((err)=>next(err))
     }
 
